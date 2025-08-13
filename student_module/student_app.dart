@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/student_module/student_font_logic.dart';
+import 'package:flutter_application_1/student_module/student_login_screen.dart';
 import 'package:flutter_application_1/student_module/student_screen.dart';
 import 'package:flutter_application_1/student_module/student_theme_logic.dart';
 import 'package:provider/provider.dart';
@@ -24,7 +25,7 @@ class StudentApp extends StatelessWidget {
         mode = ThemeMode.system;
     }
     return MaterialApp(
-      home: StudentScreen(),
+      home: StudentLoginScreen(),
       themeMode: mode,
       theme: _lightTheme(),
       darkTheme: _darkTheme(),

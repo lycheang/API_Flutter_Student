@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/student_module/message.util.dart';
 import 'package:flutter_application_1/student_module/student_font_logic.dart';
 import 'package:flutter_application_1/student_module/student_form.dart';
+import 'package:flutter_application_1/student_module/student_login_screen.dart';
 import 'package:flutter_application_1/student_module/student_model.dart';
 import 'package:flutter_application_1/student_module/student_service.dart';
 import 'package:flutter_application_1/student_module/student_theme_logic.dart';
@@ -43,6 +44,16 @@ Widget build(BuildContext context) {
             }
           },
           icon: const Icon(Icons.person_add),
+        ),
+        IconButton(
+          icon: const Icon(Icons.logout),
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const StudentLoginScreen()),
+            );
+          },
+          tooltip: "Logout",
         ),
       ],
     ),
